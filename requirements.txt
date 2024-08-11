@@ -1,5 +1,3 @@
-opencv-python
-numpy
 streamlit
 tempfile
 glob
