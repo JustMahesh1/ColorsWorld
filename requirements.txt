@@ -4,4 +4,3 @@ streamlit
 tempfile
 glob
 zipfile
-pip install --upgrade pip
