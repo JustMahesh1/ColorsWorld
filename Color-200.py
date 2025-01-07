@@ -4,7 +4,6 @@ import cv2
 import streamlit as st
 from PIL import Image
 import os
-from streamlit import *
 import base64
 
 # Set page configuration to expand sidebar by default
