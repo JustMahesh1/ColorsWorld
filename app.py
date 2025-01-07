@@ -40,26 +40,26 @@ def render_navbar():
 
 
 
-def set_background_image(image_path):
-    # Open the image file and encode it into base64
-    with open(image_path, "rb") as image_file:
-        encoded_image = base64.b64encode(image_file.read()).decode()
+# def set_background_image(image_path):
+#     # Open the image file and encode it into base64
+#     with open(image_path, "rb") as image_file:
+#         encoded_image = base64.b64encode(image_file.read()).decode()
     
-    # Construct the background style using the base64-encoded image
-    background_style = f"""
-    <style>
-        .stApp {{
-            background-image: url('data:image/jpg;base64,{encoded_image}');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }}
-    </style>
-    """
-    st.markdown(background_style, unsafe_allow_html=True)
+#     # Construct the background style using the base64-encoded image
+#     background_style = f"""
+#     <style>
+#         .stApp {{
+#             background-image: url('data:image/jpg;base64,{encoded_image}');
+#             background-size: cover;
+#             background-position: center;
+#             background-attachment: fixed;
+#         }}
+#     </style>
+#     """
+#     st.markdown(background_style, unsafe_allow_html=True)
 
-# Set background image (local path)
-set_background_image("D:/FY_TEST/templates/color-back.jpg")  # Make sure the path is correct
+# # Set background image (local path)
+# set_background_image("D:/FY_TEST/templates/color-back.jpg")  # Make sure the path is correct
 
 
 # Render the navigation bar
@@ -136,7 +136,7 @@ st.title("Colorize Your Black and White Image")
 st.write("This app colorizes your B&W images and displays intermediate phases like 'L', 'a', 'b', and 'ab' channels.")
 
 # Load sample images
-input_images_dir = "C:/Users/mahes/Desktop/New folder/"
+input_images_dir = "./New folder/"
 input_images = [f for f in os.listdir(input_images_dir) if f.endswith(('.jpg', '.png'))]
 selected_image = st.sidebar.selectbox("Choose a sample image", ["None"] + input_images)
 
