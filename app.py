@@ -1,6 +1,6 @@
 # Import the necessary packages
 import numpy as np
-from opencv-python import *
+import cv2
 import streamlit as st
 from PIL import Image
 import os
